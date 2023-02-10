@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   push:
     paths:
-      - sampleApps/python/django-app/**
+      - django-app/**
       - '!.github/workflows/**'
       - '.github/workflows/v1.deployPythonAppToAzureWebApp.yml'
     branches:
@@ -19,9 +19,9 @@ jobs:
     - name: Build app using Oryx v1 version
       uses: Azure/appservice-build@v1
       with:
-        source-directory: sampleApps/python/django-app
+        source-directory: django-app
         platform: python
-        platform-version: 3.7
+        platform-version: 3.8
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
