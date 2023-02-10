@@ -21,6 +21,6 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
-        app-name: v1-python-sampleapp
+        app-name: TestADeploy
         publish-profile: ${{ secrets.v1PythonSampleApp }}
-        package: sampleApps/python/django-app
+        package: django-app
