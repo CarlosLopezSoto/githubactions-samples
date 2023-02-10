@@ -3,13 +3,8 @@ name: V1_BuildAndDeploy_PythonApp_ToAzureWebApp
 on:
   repository_dispatch:
   push:
-    paths:
-      - django-app/**
-      - '!.github/workflows/**'
-      - '.github/workflows/v1.deployPythonAppToAzureWebApp.yml'
     branches:
       - master
-      - actions/**
 jobs:
   build:
     runs-on: ubuntu-latest
